@@ -1,0 +1,27 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["plugin:@next/next/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["typescript", "react", "react-hooks", "jsx-a11y"],
+  "ignorePatterns": ["node_modules/"],
+  "rules": {
+    "arrow-body-style": [2, "as-needed"],
+    "class-methods-use-this": 0,
+    "no-console": 1,
+    "no-unused-vars": 2,
+    "no-use-before-define": 0,
+    "react-hooks/rules-of-hooks": 2
+  }
+}
