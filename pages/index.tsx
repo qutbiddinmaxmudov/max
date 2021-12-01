@@ -1,11 +1,11 @@
-// import type { NextPage } from 'next'
+import type { NextPage } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
 import Link from 'next/link'
 import { FormattedMessage, useIntl } from 'react-intl'
 import styles from '../styles/Home.module.css'
 
-const Home: any = () => {
+const Home: NextPage = () => {
   const intl = useIntl()
   const { locale } = useRouter()
   return (
