@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["plugin:react/recommended", "google", "prettier"],
+  "extends": ["plugin:@next/next/recommended", "google", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true

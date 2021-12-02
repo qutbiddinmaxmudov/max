@@ -1,16 +1,21 @@
 import React from 'react'
-import { Head } from 'next/document'
+import Head from 'next/head'
 import { useIntl } from 'react-intl'
 import { useRouter } from 'next/router'
 
 interface Props {
-  title: string
-  description: string
-  cardSize: 'summary' | 'summary_large_image'
-  imageUrl: string
+  title?: string
+  description?: string
+  cardSize?: 'summary' | 'summary_large_image'
+  imageUrl?: string
 }
 
-const Seo = ({ title, description, cardSize, imageUrl }: Props) => {
+const Seo = ({
+  title = 'title',
+  description = 'description',
+  cardSize = 'summary_large_image',
+  imageUrl = '/share-image.gif',
+}: Props) => {
   const intl = useIntl()
   const titleContent = intl.formatMessage({ id: title })
   const descriptionContent = intl.formatMessage({ id: description })
