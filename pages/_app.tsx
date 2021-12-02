@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import { useEffect } from 'react'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { CacheProvider, EmotionCache } from '@emotion/react'
 import { IntlProvider } from 'react-intl'
@@ -8,6 +9,7 @@ import ruLocale from '../locale/ru.json'
 import theme from '../src/theme'
 import createEmotionCache from '../src/theme/cache'
 import '../styles/globals.css'
+import { setCookie } from '../src/utils/cookie'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -18,6 +20,7 @@ interface MyAppProps extends AppProps {
 
 const MyApp = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: MyAppProps) => {
   const { locale = 'en' } = useRouter()
+  useEffect(() => setCookie('NEXT_LOCALE', locale), [locale])
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
