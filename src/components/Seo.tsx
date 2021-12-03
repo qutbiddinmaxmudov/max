@@ -23,7 +23,7 @@ const Seo = ({ title = 'title', description = 'description', cardSize = 'summary
       <meta key="twt-card" name="twitter:card" content={cardSize} data-rh="true" />
       <meta key="twt-site" name="twitter:site" content="@Max_Mudov" data-rh="true" />
       <meta key="twt-title" property="twitter:title" content={titleContent} data-rh="true" />
-      <meta key="twt-description" property="twitter:description " content={descriptionContent} data-rh="true" />
+      <meta key="twt-description" property="twitter:description" content={descriptionContent} data-rh="true" />
       <meta
         key="twt-image"
         property="twitter:image"
