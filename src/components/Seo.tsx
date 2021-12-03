@@ -10,12 +10,7 @@ interface Props {
   imageUrl?: string
 }
 
-const Seo = ({
-  title = 'title',
-  description = 'description',
-  cardSize = 'summary_large_image',
-  imageUrl = '/share-image.png',
-}: Props) => {
+const Seo = ({ title = 'title', description = 'description', cardSize = 'summary_large_image', imageUrl }: Props) => {
   const intl = useIntl()
   const titleContent = intl.formatMessage({ id: title })
   const descriptionContent = intl.formatMessage({ id: description })
@@ -27,7 +22,20 @@ const Seo = ({
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       <meta key="twt-card" name="twitter:card" content={cardSize} data-rh="true" />
       <meta key="twt-site" name="twitter:site" content="@Max_Mudov" data-rh="true" />
-      <meta key="og-image" property="og:image" content={imageUrl} data-rh="true" />
+      <meta key="twt-title" property="twitter:title" content={titleContent} data-rh="true" />
+      <meta key="twt-description" property="twitter:description " content={descriptionContent} data-rh="true" />
+      <meta
+        key="twt-image"
+        property="twitter:image"
+        content={imageUrl || `http://www.m4x.site/share-image-${locale}.png`}
+        data-rh="true"
+      />
+      <meta
+        key="og-image"
+        property="og:image"
+        content={imageUrl || `http://www.m4x.site/share-image-${locale}.png`}
+        data-rh="true"
+      />
       <meta key="og-url" property="og:url" content="http://www.m4x.site/" data-rh="true" />
       <meta key="og-type" property="og:type" content="website" data-rh="true" />
       <meta key="og-title" property="og:title" content={titleContent} data-rh="true" />
