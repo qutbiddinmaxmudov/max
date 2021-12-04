@@ -1,3 +1,4 @@
+Sitemap: https://www.m4x.site/sitemap.xml
 User-Agent: *
 Allow: /
 
