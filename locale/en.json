@@ -1,6 +1,19 @@
 {
   "title": "Welcome to website Max",
   "description": "The site is still under development and will be available soon!",
-  "changeLang": "Поменять на русский"
-
+  "changeLang": "Поменять на русский",
+  "seo": {},
+  "navbar": {
+    "about": "About me",
+    "portfolio": "Portfolio",
+    "contacts": "Contacts",
+    "copyright": "Copyright © 2022 Kutbiddin Makhmudov. Все права защищены.",
+    "links": [
+      "Mail",
+      "Facebook",
+      "Linkedin",
+      "Instagram",
+      "Github"
+    ]
+  }
 }
