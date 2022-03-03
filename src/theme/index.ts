@@ -14,9 +14,16 @@ const generateTheme = (themeType: 'light' | 'dark' = 'dark') =>
         fontFamily: ['Montserrat, sans-serif'].join(','),
       },
       palette: {
+        mode: themeType,
         text: {
           primary: '#FFFFFF',
-          secondary: '#CCCCCC'
+          secondary: '#CCCCCC',
+        },
+        info: {
+          main: '#676767',
+        },
+        primary: {
+          main: '#164DF2',
         },
         background: {
           default: themeType === 'dark' ? '#2C2C2C' : '#FFFFFF',

@@ -8,7 +8,13 @@ type Props = {
   collapsed: boolean
 }
 
-const links = ['https://google.ru', 'https://google.ru', 'https://google.ru', 'https://google.ru', 'https://google.ru']
+const links = [
+  'mailto:qutbiddinmaxmudov@mail.ru',
+  'https://www.facebook.com/qutbiddin.maxmudov',
+  'https://www.linkedin.com/in/qutbiddin-makhmudov/',
+  'https://www.instagram.com/max__mudov/',
+  'https://github.com/qutbiddinmaxmudov',
+]
 
 const NavbarMenu = ({ collapsed }: Props) => {
   const { locale, asPath } = useRouter()
@@ -92,6 +98,7 @@ const NavbarMenu = ({ collapsed }: Props) => {
       >
         {links.map((url, index) => (
           <Typography
+            key={url}
             sx={{
               color: (theme) => theme.palette.text.primary,
               textDecoration: 'none',

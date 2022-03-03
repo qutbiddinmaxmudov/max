@@ -1,12 +1,18 @@
 import { Box } from '@mui/system'
+import { SxProps } from '@mui/material'
 import React from 'react'
 
-const Wrapper: React.FC = ({ children }) => (
+type Props = {
+  sx?: SxProps
+}
+
+const Wrapper: React.FC<Props> = ({ children, sx }) => (
   <Box
     sx={{
-      minHeight: '100vh',
+      height: '100vh',
       padding: '80px',
       position: 'relative',
+      ...sx,
     }}
   >
     {children}

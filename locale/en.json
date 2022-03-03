@@ -15,5 +15,10 @@
       "Instagram",
       "Github"
     ]
+  },
+  "intro":{
+    "title": "Makhmudov Kutbiddin",
+    "subtitle": "Web developer",
+    "text": "I like to craft solid and scalable frontend products with great user experiences."
   }
 }
