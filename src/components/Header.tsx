@@ -6,6 +6,7 @@ import text from '../images/logo-text.svg'
 import ThemeChanger from '../layout/ThemeChanger'
 import NavbarButton from './NavbarButton'
 import NavbarMenu from './NavbarMenu'
+import Dot from './common/Dot'
 
 interface Props {
   logo: boolean
@@ -24,9 +25,12 @@ const Header = ({ logo }: Props) => {
             width: logo ? 0 : 104,
             height: 36,
             transition: '1s',
+            display: 'flex',
+            alignItems: 'flex-end',
           }}
         >
           <Image src={text} priority />
+          <Dot size={14} sx={{ ml: '5px' }} />
         </Box>
         <Box
           sx={{

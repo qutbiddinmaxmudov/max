@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import Cube from '../src/components/common/Cube'
 import Header from '../src/components/Header'
 import HomeAbout from '../src/components/HomeAbout'
+import HomeNav from '../src/components/HomeNav'
 import Intro from '../src/components/Intro'
 
 const scrollTime = 1000
@@ -38,6 +39,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Header logo={Boolean(page)} click={logoClickHandler} />
+      <HomeNav setPage={setPage} items={5} page={page} />
       <Box
         sx={{
           position: 'relative',
